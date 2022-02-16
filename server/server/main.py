@@ -34,9 +34,6 @@ class TranslatorRequest(BaseModel):
 class TranslationResult(TranslatorRequest):
     translation: str
 
-    class Config:
-        orm_mode = True
-
 
 def _make_async(func: Callable[..., Any]) -> Callable[..., Awaitable[Any]]:
     async def wrapper(*args, **kwargs):
